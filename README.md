@@ -1,6 +1,3 @@
-
-
-
 # Context-CAM: Using multi-scale context to eliminate the background noise regions in the class activation map
 
 In this work, we propose a new method called Context-CAM, which eliminates background noise by using context information from  class activation maps at different scales. 
