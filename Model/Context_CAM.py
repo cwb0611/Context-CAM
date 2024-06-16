@@ -17,7 +17,6 @@ class Context_CAM(Base_Mult_layer_CAM):
 
     def forward(self, input, class_idx=None, svd_denoise = False, retain_graph=False):         
         b, c, h, w = input.size()
-        print(svd_denoise)
 
         self.region_enhanced_maps = torch.zeros((b,self.layer_num,h,w)).cuda()
         self.denoised_maps = torch.zeros((b,self.layer_num,h,w)).cuda()

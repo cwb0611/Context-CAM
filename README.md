@@ -7,7 +7,9 @@ In this work, we propose a new method called Context-CAM, which eliminates backg
 ## Some issues
 
 1.In this github, we only release the code about ISLVRC2012 data, and the codes for other datasets are being organized.
+
 2.We provide some images for testing. If you need to test more images, you need to go to [ISLVRC2012](https://image-net.org/index.php) to download more images.
+
 3.The output CAM visualization will be saved in the folder "cam_output"
 
 ### Example commands
