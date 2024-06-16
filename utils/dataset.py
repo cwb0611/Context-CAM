@@ -38,9 +38,10 @@ def load_box_list(box_path):
 
 def find_test_data(data_list, img_name_list, test_img_name_list):
     test_data_list = []
-    for i in range(len(img_name_list)):
-        if img_name_list[i] in test_img_name_list:
-            test_data_list.append(data_list[i])
+    for test_img_name in test_img_name_list:
+        for i in range(len(img_name_list)):
+            if img_name_list[i] == test_img_name:
+                test_data_list.append(data_list[i])
     return test_data_list
 
 
