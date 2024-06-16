@@ -58,9 +58,9 @@ class Context_CAM(Base_Mult_layer_CAM):
                 self.denoised_maps[0][i] = self.region_enhanced_maps[0][i]*self.attention_maps[0][i]
                 self.denoised_maps[0][i] = self.normalized(self.denoised_maps[0][i])
                 self.binary_maps[0][i] = self.Adaptive_Binarization(self.denoised_maps[0][i])
-            ba_cam = self.denoised_maps.sum(1)/self.layer_num
+            context_cam = self.denoised_maps.sum(1)/self.layer_num
         self.remove_feature_and_gradients()
-        return ba_cam, logit
+        return context_cam, logit
 
 
     def __call__(self, input, class_idx=None, svd_denoise = False, retain_graph=False):
