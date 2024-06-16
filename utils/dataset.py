@@ -90,14 +90,13 @@ class ImageClassification(nn.Module):
 class ISLVRC2012_Dataset(Dataset):
 
     def __init__(self, root, img_name_label_list_path, box_path, image_transform=None):
-        self.test_img_name_list = os.listdir(root+ "images/")
+        self.test_img_name_list = os.listdir(root+ "image/")
 
         img_name_list, label_list = load_img_name_labels_list(root + img_name_label_list_path)
         box_list = load_box_list(root + box_path)
 
         self.test_label_list = find_test_data(label_list, img_name_list, self.test_img_name_list)
         self.test_box_list = find_test_data(box_list, img_name_list, self.test_img_name_list)
-        print(len(self.test_label_list),len(self.test_box_list),len(self.test_img_name_list))
         self.root = root
         self.image_transform = image_transform
         if len(self.test_img_name_list) != len(self.test_box_list):
@@ -107,7 +106,7 @@ class ISLVRC2012_Dataset(Dataset):
         return len(self.test_img_name_list)
 
     def __getitem__(self, idx):
-        img = PIL.Image.open(self.root + "images/" + self.test_img_name_list[idx]).convert("RGB")
+        img = PIL.Image.open(self.root + "image/" + self.test_img_name_list[idx]).convert("RGB")
         ori_img = np.array(img)
         w, h = img.size[:2]
         image_size = [h, w]

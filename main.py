@@ -58,7 +58,6 @@ def main():
 
         for class_index in labels:
             context_cam = get_cam(args,image,vis_model,class_index,net)
-            print(context_cam.sum())
             vis_module(ori_image, context_cam[0].cpu().detach().numpy(),name+"_"+str(class_index.item()), "./cam_output/"+str(args.test_method)+"/")
     print(args.dataset_name)
     print(args.test_method)
