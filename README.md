@@ -2,7 +2,7 @@
 
 In this work, an innovative Context-level weights-based CAM (Context-CAM) method is proposed, which guarantees: 1) the non-discriminative regions that have similar appearances with and are located close to the discriminative regions can be highlighted as well by the newly designed Region-enhanced Mapping (REM) module with context-level weights; and 2) the background noises are gradually eliminated via a newly proposed Semantic-Guided Reverse Sequence Fusion (SRSF) strategy that can sequentially denoise and fuse the region-enhanced maps from the last layer to the first layer.
 
-<img src="paper_image/fig8.jpg" width="1200px" height="450px" title=" Visualization results of FG-Grad-CAM, FG-Grad-CAMsup>D</sup>, FG-Score-CAM, FG-Score-CAMsup>D</sup>, Context-CAM, and Context-CAMsup>D</sup>"></img><br/>
+<img src="paper_image/fig8.jpg" width="1217px" height="1037px" title=" Visualization results of FG-Grad-CAM, FG-Grad-CAMsup>D</sup>, FG-Score-CAM, FG-Score-CAMsup>D</sup>, Context-CAM, and Context-CAMsup>D</sup>"></img><br/>
 
 ## Some issues
 
